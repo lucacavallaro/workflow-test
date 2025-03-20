@@ -1,0 +1,13 @@
+name: Deploy
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event metadata
+        run: echo "${{ toJson(github.event) }}"
