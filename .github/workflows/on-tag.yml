@@ -1,0 +1,13 @@
+name: CI on Tag
+
+on:
+  push:
+    tags:
+      - "*" # Run on all tags
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: echo "${{ github.event.ref }}"
