@@ -1,5 +1,11 @@
 # greet
 
+## 0.1.4
+
+### Patch Changes
+
+- 4f1582e: Test deploy action
+
 ## 0.1.3
 
 ### Patch Changes
