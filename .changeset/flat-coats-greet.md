@@ -1,5 +1,0 @@
----
-"greet": patch
----
-
-greet refactor
