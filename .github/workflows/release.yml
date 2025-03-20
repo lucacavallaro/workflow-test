@@ -11,6 +11,10 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+
+    outputs:
+      publishedWorkspaces: ${{ steps.changesets.outputs.publishedPackages }}
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -27,9 +31,23 @@ jobs:
         run: yarn
 
       - name: Create Release Pull Request
+        id: changesets
         uses: changesets/action@v1
         with:
           version: yarn changeset version
           publish: yarn changeset tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  make_artifact:
+    name: Make Artifact
+    runs-on: ubuntu-latest
+    needs: release
+
+    strategy:
+      matrix:
+        workspace: ${{ fromJSON(needs.release.outputs.publishedWorkspaces) }}
+
+    steps:
+      - name: Echo
+        run: echo "Releasing ${{ matrix.workspace }}"
