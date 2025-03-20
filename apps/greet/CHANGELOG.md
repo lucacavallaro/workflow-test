@@ -1,5 +1,11 @@
 # greet
 
+## 0.1.3
+
+### Patch Changes
+
+- 711f1a9: Test release with matrix object
+
 ## 0.1.2
 
 ### Patch Changes
