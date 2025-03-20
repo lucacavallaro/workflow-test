@@ -1,0 +1,13 @@
+{
+  "name": "workflow-test",
+  "packageManager": "yarn@4.7.0",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1",
+    "prettier": "3.5.3"
+  }
+}
