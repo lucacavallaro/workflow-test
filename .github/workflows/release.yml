@@ -52,4 +52,4 @@ jobs:
 
     steps:
       - name: Echo
-        run: echo "Releasing ${{ matrix.workspace }}"
+        run: echo "Releasing ${{ matrix.workspace.name }}"
