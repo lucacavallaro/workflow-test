@@ -8,3 +8,6 @@
 
 .input
 out
+dist
+.turbo
+artifacts
