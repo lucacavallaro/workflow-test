@@ -1,5 +1,11 @@
 # greet
 
+## 0.1.7
+
+### Patch Changes
+
+- 19c47f1: Test build workflow
+
 ## 0.1.6
 
 ### Patch Changes
