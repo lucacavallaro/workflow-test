@@ -1,7 +1,7 @@
 {
-  "IsEncrypted": true,
+  "IsEncrypted": false,
   "Values": {
-    "FUNCTIONS_WORKER_RUNTIME": "CfDJ8CN316sk7flNg9batwzizfVXVl3ZuX+H4MAVXcRNSJhIPXXjIscENwmD1Oh0lo8/c4w+oCEuem0rbCqsJY9Sb5FU/pHu07Qe7YohcFD+6xWLBe/Yr+X90+LgWcWeCMgmFA=="
+    "FUNCTIONS_WORKER_RUNTIME": "node"
   },
   "ConnectionStrings": {}
 }
