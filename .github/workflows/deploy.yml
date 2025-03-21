@@ -21,5 +21,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Echo
-        run: echo "${{ github.event.inputs.workspace_name }}"
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Reduce monorepo to ${{ inputs.workspace_name }}
+        run: |
+          corepack enable 
+          yarn workspaces focus
+          yarn turbo prune ${{ inputs.workspace_name }}
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+          cache-dependency-path: ./out/yarn.lock
+
+      - name: Build ${{ inputs.workspace_name }}
+        run: |
+          yarn config set nodeLinker node-modules
+          yarn install --immutable
+          yarn build
+        working-directory: ./out
