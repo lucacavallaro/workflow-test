@@ -1,0 +1,12 @@
+{
+  "name": "hello-ca",
+  "version": "0.1.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@azure/functions": "^4.7.0"
+  },
+  "scripts": {
+    "start": "func start"
+  }
+}
