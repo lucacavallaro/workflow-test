@@ -6,6 +6,9 @@ on:
       workspace_name:
         type: string
         required: true
+      version:
+        type: string
+        default: "latest"
   workflow_dispatch:
     inputs:
       workspace_name:
@@ -14,6 +17,9 @@ on:
         options:
           - greet
           - hello-ca
+      version:
+        type: string
+        default: "latest"
 
 jobs:
   artifact:
