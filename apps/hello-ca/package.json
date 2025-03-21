@@ -1,12 +1,16 @@
 {
   "name": "hello-ca",
   "version": "0.1.1",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "dependencies": {
     "@azure/functions": "^4.7.0"
   },
   "scripts": {
-    "start": "func start"
+    "start": "func start",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
   }
 }

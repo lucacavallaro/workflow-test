@@ -7,6 +7,10 @@
   },
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "github.copilot.chat.commitMessageGeneration.instructions": [
-    { "file": ".github/copilot/commit-message.md" }
-  ]
+    {
+      "file": ".github/copilot/commit-message.md"
+    }
+  ],
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
