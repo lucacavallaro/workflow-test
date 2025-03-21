@@ -53,4 +53,4 @@ jobs:
 
     steps:
       - name: Echo
-        run: echo "Packing ${{ matrix.workspace.name }}..."
+        run: echo "${{ matrix.workspace.name }}"
