@@ -6,6 +6,14 @@ on:
       workspace_name:
         type: string
         required: true
+  workflow_dispatch:
+    inputs:
+      workspace_name:
+        type: choice
+        required: true
+        options:
+          - greet
+          - hello-ca
 
 jobs:
   artifact:
