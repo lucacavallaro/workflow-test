@@ -52,4 +52,4 @@ jobs:
 
     uses: lucacavallaro/workflow-test/.github/workflows/deploy.yml@main
     with:
-      workspace_name: ${{ matrix.workspace }}
+      workspace_name: ${{ matrix.workspace.name }}
