@@ -1,5 +1,11 @@
 # greet
 
+## 0.1.6
+
+### Patch Changes
+
+- d5e2bf9: Change greet copy
+
 ## 0.1.5
 
 ### Patch Changes
