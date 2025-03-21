@@ -40,17 +40,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  artifact:
+  deploy:
     if: ${{ needs.release.outputs.publishedWorkspaces != '[]' }}
 
-    name: Artifact
-    runs-on: ubuntu-latest
+    name: Deploy
     needs: release
 
     strategy:
       matrix:
         workspace: ${{fromJson(needs.release.outputs.publishedWorkspaces)}}
 
-    steps:
-      - name: Echo
-        run: echo "${{ matrix.workspace.name }}"
+    uses: lucacavallaro/workflow-test/.github/workflows/deploy.yml@main
+    with:
+      workspace_name: ${{ matrix.workspace }}
